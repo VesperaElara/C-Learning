@@ -27,12 +27,6 @@ So, it is always a good practice to initialize the auto variable with some value
 
 // A global variable is, by default, initialized with 0.
 
-/*
-extern modifier - used when a particular file needs to access a variable from another file.
-This only needs declaration, not definition.
-syntax: extern int var;
-*/
-
 
 
 int main ()
