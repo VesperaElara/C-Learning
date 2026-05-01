@@ -20,6 +20,11 @@ int main()
     a = a ^ b;
     printf("Final values after XOR: a = %d , b = %d\n", a , b);
     return 0;
+
+    // XOR gives 0 when the bits are identical (1|1 or 0|0)
+    // XOR gives 1 when the bits are not identical
+    // XNOR gives 1 when the bits are identical.
+    // XNOR gives 0 when the bits are not identical.
 }
 
 // 0100
