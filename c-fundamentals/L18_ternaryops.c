@@ -50,12 +50,28 @@ int main()
 
     if (result == 'p')
     {
-        printf("Pass\n");
+        printf("Pass\n\n");
     }
     else // if (result == 'f')
     {
-        printf("Fail\n");
+        printf("Fail\n\n");
     }
+
+    int var = 75;
+    int var2 = 56;
+    int num;
+
+    num = sizeof(var) ? (var2 > 23 ? ((var == 75) ? 'A' : 0) : 0) : 0;
+    printf("ANSWER to homework problem: %d\n", num);
+    
+    // sizeof(var) is TRUE
+    // We enter block (var2 > 23 ? ((var == 75) ? 'A' : 0) : 0)
+    // var2 > 23 is TRUE
+    // We enter block ((var == 75) ? 'A' : 0)
+    // var == 75 is TRUE
+    // We finally get num = 'A'
+    // A is represented by 65 in ASCII table
+    // 65 is printed.
 
     return 0;
 }
