@@ -30,3 +30,10 @@ int main()
     printf("ANSWER: %d\n", a += 3); // a = a + 3 = 2 + 3 = 5
 
 }
+
+/*
+    Postfix operators have higher precendence than prefix operators.    
+    Therefore, for both postfix and prefix operators: associativity is 
+    not from left to right, but from right to left.
+    All assignment operators have associativity from right to left.
+*/
