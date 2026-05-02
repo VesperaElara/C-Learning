@@ -28,7 +28,7 @@ int main()
                         // b not evaluated due to short-circuit, true returned immediately.
     int d = b-- && --a; // b-- is NOT zero (post-increment), it changes to zero in NEXT step.
                         // a changes from 2 to 1.
-    // d is true (1), c is true (1), b is 0 (in next step), a is 1
+    // d is true (1), c is true (1), b becomes 0 (in next step), a is 1
     printf("d = %d, c = %d, b = %d, a = %d\n", d , c , b , a); 
     // ANSWER = d = 1, c = 1, b = 0, a = 1 
 
