@@ -19,7 +19,7 @@ Short Circuit:
 
 */
 
-// NOTE: Initial code written by me @DishaSrivastava27
+// NOTE: Initial code written by me, Disha (@VesperaElara)
 // AI was used to reformat the code and comments for increased readability.
 
 /*
