@@ -15,6 +15,7 @@ int main()
     printf("Using for loop:\n");
     // for loop is represented as follows:
     // for (initialization; condition; increment/decrement)
+    // the "condition" part is a boolean (true or false)
     for (counter = 3; counter >= 0; counter--)
     {
         printf("%d\n", counter);
