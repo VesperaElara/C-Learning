@@ -23,5 +23,5 @@ int main()
 
     return 0;
 
-    // Use a while loop when you don't know the end-point; use a for loop when you do."
+    // Use a while loop when you don't know the end-point; use a for loop when you do.
 }
