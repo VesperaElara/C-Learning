@@ -71,7 +71,7 @@ int main()
     // var == 75 is TRUE
     // We finally get num = 'A'
     // A is represented by 65 in ASCII table
-    // 65 is printed.
+    // A is printed.
 
     return 0;
 }
