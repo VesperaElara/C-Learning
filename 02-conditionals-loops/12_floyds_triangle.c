@@ -1,24 +1,23 @@
 #include <stdio.h>
 
 int main() 
+
 {
-    int rows;
-    int current_number = 1;
 
-    printf("Enter the number of rows: ");
-    scanf("%d", &rows);
+int i, x;
+int n = 8;
+int k = 1;
 
-    for (int i = 1; i <= rows; i++) 
+for (i = 0; i < n; i++)
+  {
+    for (x = 0; x < i; x++)
     {
-        
-        for (int j = 1; j <= i; j++) 
-        {
-            printf("%d ", current_number);
-            current_number++;
-        }
-        
-        printf("\n");
-     }
+        printf("%d ", k);
+        k++;
+    }
+    printf("\n");
+  }
 
-    return 0;
+return 0;
+
 }
