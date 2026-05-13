@@ -15,9 +15,9 @@ int main()
 {
     int a = 4;
     int b = 3;
-    a = a ^ b; // 0100 ^ 0011 = 0111 (7)
-    b = a ^ b; // 
-    a = a ^ b;
+    a = a ^ b; // 0100 ^ 0011 = 0111 (7 = a)
+    b = a ^ b; // 0111 ^ 0011 = 0100 (4 = b)
+    a = a ^ b; // 0111 ^ 0100 = 0011 (3 = a)
     printf("Final values after XOR: a = %d , b = %d\n", a , b);
     return 0;
 
