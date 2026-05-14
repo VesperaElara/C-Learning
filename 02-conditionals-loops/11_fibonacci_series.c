@@ -9,12 +9,10 @@ int main()
 
     printf("The first %d numbers of the fibonacci sequence:\n", n);
 
-    printf("%d %d ", x , y);
-
-    for (counter = 0; counter < n - 2; counter++)
+    for (counter = 0; counter < n; counter++)
     {
+        printf("%d ", x);
         i = x + y;
-        printf("%d ", i);
         x = y;
         y = i;
     }
