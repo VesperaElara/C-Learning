@@ -1,0 +1,1 @@
+type this command in terminal: del *.exe
