@@ -9,26 +9,35 @@ int increment()
 }
 
 /*
-To ensure no other file can access the global variables in this file,
-we can simply add a 'static' prefix before the global variable to
-ensure it won't be accessed by any other file except the one in which
-it is present.
+========================================================================
+THE TWO FACES OF THE 'static' KEYWORD IN C
+========================================================================
 
-static int count;
-int increment()
-{
-    count += 1;
-    return count;
-}
+1. STATIC GLOBAL VARIABLES (File-Level Scope / Privacy)
+------------------------------------------------------------------------
+* By default, global variables are visible to the entire project (via 'extern').
+* Adding 'static' before a global variable restricts its scope strictly to 
+  the file it is declared in. No other file can link to or access it.
+  
+  Example:
+  static int count; // Private to this file; hidden from other files.
 
-A local variable, which isn't initialized, gives a garbage value.
-A static local variable is always initialized with zero.
 
-Static variable remains in memory even if it is declared within a 
-block on the other hand automatic variable is destroyed after the 
-completion of function in which it was declared.
-Static variable if declared outside the scope of any function will 
-act like global variable but only within the file in which it is declared.
-You can only assign a constant literal (or value) to a static variable.
+2. STATIC LOCAL VARIABLES (Function-Level Scope / Persistence)
+------------------------------------------------------------------------
+* Declared INSIDE a function. Unlike normal (automatic) local variables 
+  that are destroyed when a function finishes, a static local variable 
+  remains in memory for the entire duration of the program.
+* It retains its value across multiple function calls.
 
+
+3. KEY RULES FOR ALL STATIC VARIABLES
+------------------------------------------------------------------------
+* Initialization: Unlike normal local variables (which contain unpredictable 
+  "garbage values" if uninitialized), all static variables are automatically 
+  initialized to zero by default.
+* Constant Assignment: You can only initialize a static variable using a 
+  constant literal (e.g., static int x = 5;). You cannot initialize it using 
+  the value of another variable or a function call.
+========================================================================
 */
