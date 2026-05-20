@@ -21,19 +21,19 @@ int main()
 /*
 
 type command:
-code L9_4_staticvar.c
-gcc L9_4_staticvar.c L9_4_ref.c -o L9
-./L9 
+code L09_4_staticvar.c
+gcc L09_4_staticvar.c L09_4_ref.c -o L09
+./L09 
 
 THE GLOBAL MEMORY & LINKAGE SUMMARY
 
  1. THE "SHARED WHITEBOARD" (Global Scope):
-    'int count' in File 2 is a global variable. It lives in the 
+    'int count' in file L09_4_ref.c is a global variable. It lives in the 
     Data Segment of RAM for the entire life of the program.
     It is "Public Property" accessible to any function with the "key."
  
  2. THE "WINDOW" (extern):
-    'extern int count' in File 1 is NOT a new variable. 
+    'extern int count' in file L09_staticvar.c is NOT a new variable. 
     It is a declaration telling the compiler: "The 'count' variable 
     exists elsewhere. Link to that specific memory address later."
  
@@ -55,6 +55,6 @@ THE GLOBAL MEMORY & LINKAGE SUMMARY
  5. THE "STATIC" BARRIER (Visibility vs. Lifetime):
     'static' on a global variable keeps the memory alive (Lifetime) 
     but paints over the "window" (Visibility). 
-    If 'count' were static in File 2, File 1's 'extern' would fail 
+    If 'count' were static in file L09_4_ref.c, file L09_staticvar.c's 'extern' would fail 
     because the Linker can't find a "public" version of it.
  */
