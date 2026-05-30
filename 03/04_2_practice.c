@@ -14,10 +14,11 @@ void f2(int *a, int *b) {
 
 int main() {
     int a = 4, b = 5, c = 6;
+    printf("Initially: a = %d , b = %d , c = %d\n", a , b , c);
     f1(a, b);
     f2(&b, &c);
-    printf("a = %d , b = %d , c = %d\n", a , b , c);
-    printf("%d", c - a - b);
+    printf("Finally: a = %d , b = %d , c = %d\n", a , b , c);
+    printf("c - a - b = %d - %d - %d = %d\n", c , a , b , c - a - b);
     return 0;
 }
 
