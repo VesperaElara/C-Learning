@@ -35,7 +35,7 @@ and functions differently:
 /*
 
 type in terminal:
-gcc 05.c 05_1.c -o 05
+gcc 05_static_function_main.c 05_reference.c -o 05
 ./05
 
 */
