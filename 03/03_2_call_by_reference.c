@@ -21,7 +21,7 @@ int main()
     // We send the 'Home Address' of x and y, not the numbers
     fun(&x, &y);
 
-    // Because the function fun() changed the originals, output is now 20, 10
+    // Because the function fun() changed the originals, output is now 30, 40
     printf("x = %d, y = %d", x, y);
 
     return 0;
