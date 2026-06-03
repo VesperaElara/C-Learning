@@ -19,7 +19,7 @@ it is not necessary to add the names of the parameters during function declarati
 e.g., int fun(int var1, char var2); // Not necessary
 
 it may not always be necessary to declare the function before using it,
-butt doing so is preferred/recommended.
+but doing so is preferred/recommended.
 
 */
 
