@@ -25,9 +25,7 @@ Short Circuit:
 /*
  REFINEMENT: Structure refined to isolate "Result" vs "Memory State" 
  to demystify Post-increment behavior in logical expressions.
- CONCEPT: Post-increment is "Read Now, Pay Later."
-
- 
+ CONCEPT: Post-increment is "Read Now, Pay Later." 
 */
 
 #include <stdio.h>
