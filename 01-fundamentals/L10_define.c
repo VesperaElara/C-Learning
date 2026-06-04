@@ -1,6 +1,6 @@
 // defining functions - syntax: #define NAME value
 // no semicolon at end
-// writing the NAME in ALL CAPITAL is best practice.
+// writing the NAME in ALL CAPS is best practice.
 
 #include <stdio.h>
 
@@ -32,7 +32,7 @@ int addition()
                         printf("%d is greater than %d\n",x,y); \
                     else \
                         printf("%d is greater than %d\n",y,x);
-// As you may have noticed, when you only have a single condition, 
+// As you may have noticed, when you only have a single-statement condition,
 // curly braces can be omitted in if-else statements.
 
 int greaterthan()
@@ -43,7 +43,7 @@ int greaterthan()
 
 /*
 REMEMBER!
-This will lead in a FATAL error:
+This will lead to a fatal error:
 
 #define value 89
 int main()
