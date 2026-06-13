@@ -97,10 +97,11 @@ General Element Access Formula for 3D Arrays:
 
 #include <stdio.h>
 
-int main()
+int main(void)
 {
     /*----------------------------------------------------*/
-
+    // 2D Array Configurations
+    /*----------------------------------------------------*/
     int a[3][3] =
     {
         {5, 10, 15},
@@ -110,39 +111,35 @@ int main()
 
     // --- ROW 0 ---
     // Output: Memory address of row 0, col 0 (Same as &a[0][0])
-    printf("%p\n", *(a+0)+0);     
+    printf("%p\n", (void*)(*(a + 0) + 0));     
 
     // Output: 5 (Value at &a[0][0], same as a[0][0])
-    printf("%d\n", *(*(a+0)+0));  
-
+    printf("%d\n", *(*(a + 0) + 0));  
 
     // --- ROW 1 ---
     // Output: Memory address of row 1, col 0 (Same as &a[1][0])
-    printf("%p\n", *(a+1)+0);     
+    printf("%p\n", (void*)(*(a + 1) + 0));     
 
     // Output: 4 (Value at &a[1][0], same as a[1][0])
-    printf("%d\n", *(*(a+1)+0));  
-
+    printf("%d\n", *(*(a + 1) + 0));  
 
     // --- ROW 2 ---
     // Output: Memory address of row 2, col 0 (Same as &a[2][0])
-    printf("%p\n", *(a+2)+0);     
+    printf("%p\n", (void*)(*(a + 2) + 0));     
 
     // Output: 8 (Value at &a[2][0], same as a[2][0])
-    printf("%d\n", *(*(a+2)+0));  
-
+    printf("%d\n", *(*(a + 2) + 0));  
 
     // --- ROW 2, COLUMN 2 ---
     // Output: Memory address of row 2, col 2 (Same as &a[2][2])
-    printf("%p\n", *(a+2)+2);   
+    printf("%p\n", (void*)(*(a + 2) + 2));   
 
     // Output: 24 (Value at &a[2][2], same as a[2][2])
-    printf("%d\n", *(*(a+2)+2));  
-
-    // Positioning of brackets can either make or break your pointers.
+    printf("%d\n", *(*(a + 2) + 2));  
 
     /*----------------------------------------------------*/
-
+    // 3D Array Configurations
+    /*----------------------------------------------------*/
     printf("----------------------------------------------------\n");
 
     int b[3][3][3] =
@@ -167,10 +164,17 @@ int main()
         }
     };
 
-    printf("%p\n", *b);
+    // Accessing Element b[0][0][0] = 5
+    printf("%p\n", (void*)(*(*(b + 0) + 0) + 0));     // Gives &b[0][0][0]
+    printf("%d\n", *(*(*(b + 0) + 0) + 0));           // Gives b[0][0][0] -> 5
 
+    // Accessing Element b[1][1][0] = 4 (Block 1, Row 1, Col 0)
+    printf("%p\n", (void*)(*(*(b + 1) + 1) + 0));     // Gives &b[1][1][0]
+    printf("%d\n", *(*(*(b + 1) + 1) + 0));           // Gives b[1][1][0] -> 4
 
+    // Accessing Element b[2][1][2] = 90 (Block 2, Row 1, Col 2)
+    printf("%p\n", (void*)(*(*(b + 2) + 1) + 2));     // Gives &b[2][1][2]
+    printf("%d\n", *(*(*(b + 2) + 1) + 2));           // Gives b[2][1][2] -> 90
 
-
-
+    return 0;
 }
