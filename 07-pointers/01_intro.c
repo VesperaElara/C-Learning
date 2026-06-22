@@ -77,7 +77,19 @@ Method A: Multi-line (Declaration followed by Initialization)
 Method B: Single-line (Combined Declaration and Initialization)
     int x = 5, *ptr = &x;
 
+Method C: Single-line Declaration and Initialization
+    int x = 5;
+    int *ptr = &x;
+
 Both methods achieve identical results in memory: 'ptr' successfully holds 
 the memory address of 'x'.
 ================================================================================
 */
+
+#include <stdio.h>
+int main()
+{
+  int x = 5;
+  int *p = &x;
+  printf("Address of x = %p\nValue stored in x = %d\n", p, *p);
+}

@@ -68,12 +68,12 @@ Key Takeaway:
 
 Consider the following program sequence:
 
-    int i = 1;      // An integer 'i' is initialized to 1.
+    int i = 1;          // An integer 'i' is initialized to 1.
     int *p = &i, *q;    // Pointer 'p' is initialized to point to 'i'.
-    q = p;          // Pointer 'q' is assigned the address in 'p'. 
-                    // Now, both 'p' and 'q' point to 'i'.
-    *q = 5;         // The value at the address pointed to by 'q' 
-                    // (which is 'i') is changed to 5.
+    q = p;              // Pointer 'q' is assigned the address in 'p'. 
+                        // Now, both 'p' and 'q' point to 'i'.
+    *q = 5;             // The value at the address pointed to by 'q' 
+                        // (which is 'i') is changed to 5.
     printf("%d", *p);
 
 Analysis & Execution Flow:
