@@ -39,9 +39,9 @@ starting at base memory address 1000.
 
 Element Index:     [0]     [1]     [2]     [3]     [4]     [5]     [6]     [7]
 Memory Address:   1000    1004    1008    1012    1016    1020    1024    1028
-                  ^
-                  |
-             p = &a[0] (p contains address 1000)
+                    ^
+                    |
+               p = &a[0] (p contains address 1000)
 
 If we execute:
     p = p + 1;
