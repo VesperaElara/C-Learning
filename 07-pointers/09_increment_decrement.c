@@ -105,8 +105,16 @@ int main()
 
     int *p = &a[3], *q = &a[3], *r = &a[3], *s = &a[3];
 
-    printf("%d\n", *(p++)); // Post-increment   : 4
-    printf("%d\n", *(++q)); // Pre-increment    : 5
-    printf("%d\n", *(r--)); // Post-decrement   : 4
-    printf("%d\n", *(--s)); // Pre-decrement    : 3
+    printf("*p = *q = *r = *s : %d\n", *p);
+    printf("*(p++) : %d\n", *(p++));    // Post-increment   : 4
+    printf("*(++q) : %d\n", *(++q));    // Pre-increment    : 5
+    printf("*(r--): %d\n", *(r--));     // Post-decrement   : 4
+    printf("*(--s) : %d\n", *(--s));    // Pre-decrement    : 3
+
+    printf("\n");
+
+    printf("*p : %d\n", *p);
+    printf("*q : %d\n", *q);
+    printf("*r : %d\n", *r);
+    printf("*s : %d\n", *s);
 }
