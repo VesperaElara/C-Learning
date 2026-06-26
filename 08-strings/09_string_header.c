@@ -19,23 +19,32 @@ int main() {
 TOPIC: THE C STRING COPY FUNCTION (strcpy)
 
 OVERVIEW
-In C, strings are represented as arrays of characters terminated by a null character (\0). Because C arrays do not support direct assignment (e.g., str1 = str2 is invalid), the <string.h> library provides the strcpy function to perform string copying.
+In C, strings are represented as arrays of characters terminated 
+by a null character (\0). Because C arrays do not support direct 
+assignment (e.g., str1 = str2 is invalid), the <string.h> library 
+provides the strcpy function to perform string copying.
 
 FUNCTION PROTOTYPE
 char* strcpy(char* destination, const char* source);
 
 PARAMETERS
-1. destination: A pointer to the destination character array where the content is to be copied. It must be large enough to hold the source string and the null terminator.
-2. source: A pointer to the null-terminated string to be copied. The 'const' qualifier ensures the source string is not modified during the operation.
+1. destination: A pointer to the destination character array where 
+   the content is to be copied. It must be large enough to hold 
+   the source string and the null terminator.
+2. source: A pointer to the null-terminated string to be copied. 
+   The 'const' qualifier ensures the source string is not modified.
 
 KEY BEHAVIOR
-- The function copies the entire string from 'source' to 'destination', including the null terminator (\0).
-- It returns a pointer to the 'destination' string. This allows for function chaining or direct usage within other functions like printf.
+- Copies the entire string from source to destination, including 
+  the null terminator (\0).
+- Returns a pointer to the destination string, allowing for 
+  chaining or direct usage within other functions.
 
 MEMORY SAFETY WARNING
-- strcpy does not check if the 'destination' array has enough space to hold the 'source' string.
-- If the source string is larger than the destination array, a buffer overflow will occur, leading to undefined behavior or potential security vulnerabilities.
-- For safer production code, consider using strncpy, which allows you to specify the maximum number of characters to copy.
+- strcpy does not check if the destination array has enough space.
+- If the source string is larger than the destination, a buffer 
+  overflow occurs. Always ensure sufficient buffer size or use 
+  strncpy for safer operations.
 
 ASCII ILLUSTRATION OF MEMORY
 +---------------------------------------+
@@ -43,5 +52,5 @@ ASCII ILLUSTRATION OF MEMORY
 +---------------------------------------+
 | Char  | H | e | l | l | o | \0|
 +---------------------------------------+
-|  Copying proceeds character by character until \0 is reached.
+Copying proceeds character by character until \0 is reached.
 */
