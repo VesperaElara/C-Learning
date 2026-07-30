@@ -20,7 +20,6 @@ int main()
 /*
 
 type command:
-code L09_4_staticvar.c
 gcc L09_4_staticvar.c L09_4_ref.c -o L09
 ./L09
 
